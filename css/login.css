@@ -8,6 +8,12 @@ html, body {
   background-color: #000;
 }
 
+.lt_login .panel-heading {
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  font-size: 20px;
+}
 .lt_login .mt_150 {
   margin-top: 150px;
 }
