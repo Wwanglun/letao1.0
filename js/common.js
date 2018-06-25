@@ -2,6 +2,22 @@
  * Created by 52424 on 2018/6/25.
  */
 
+// 判断用户是否登录
+var loc = location.href
+if (loc.indexOf('login.html') === -1) {
+  $.ajax({
+    type: 'get',
+    url: '/employee/checkRootLogin',
+    success: function (info) {
+      console.log(info);
+      if (info.error === 400) {
+        location.href = 'login.html'
+      }
+    }
+  })
+}
+
+
 $(function () {
   //  设置登录校正功能
   $('#form').bootstrapValidator({
@@ -56,7 +72,6 @@ $(function () {
       url: '/employee/employeeLogin',
       data: $('#form').serialize(),
       success: function (info) {
-        console.log(info);
         if (info.success === true) {
           location.href = 'index.html'
         }
@@ -88,5 +103,46 @@ $(function () {
       NProgress.done()
     })
   })
+})
+
+// 设置首页功能
+// 1. 分类管理显示隐藏
+$(function () {
+  $('.category').click(function () {
+    console.log(1);
+    $('.child').stop().slideToggle()
+  })
+
+  // 2. 设置管理栏左滑滑
+  $('.main_head a.pull-left').click(function () {
+    $('.main_head').toggleClass('hiddeMune')
+    $('.main_comment').toggleClass('hiddeMune')
+    $('.main_admin').toggleClass('hiddeMune')
+  })
+
+  // 3. 设置模态框的显示隐藏
+  $('.main_head a.pull-right').click(function () {
+    $('#logoutModal').modal('show')
+  })
+
+  $('.delBtn').click(function () {
+    $('#logoutModal').modal('hide')
+  })
+
+  $('.outBtn').click(function () {
+    $.ajax({
+      type: 'get',
+      url: '/employee/employeeLogout',
+      success: function (info) {
+        console.log(info);
+        if (info.success) {
+          location.href = 'login.html'
+        }
+      }
+    })
+  })
+
+
+
 })
 
