@@ -1,0 +1,14 @@
+
+/*-------  登陆页开始 ------*/
+html, body {
+  height: 100%;
+}
+.lt_login {
+  height: 100%;
+  background-color: #000;
+}
+
+.lt_login .mt_150 {
+  margin-top: 150px;
+}
+/*------- 登陆页结束 ------*/
