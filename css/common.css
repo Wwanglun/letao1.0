@@ -33,6 +33,10 @@ html, body {
 .lt_login .mt_150 {
   margin-top: 150px;
 }
+
+.mb_20 {
+  margin-bottom: 20px;
+}
 /*------- 登陆页结束 ------*/
 
 /*-------  首页开始 ------*/
@@ -151,8 +155,8 @@ html, body {
   border: 1px solid #000;
 }
 
-.user-comment table tr td,
-.user-comment table tr th{
+ table tr td,
+ table tr th{
   text-align: center;
   vertical-align: middle;
 }
