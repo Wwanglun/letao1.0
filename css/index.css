@@ -1,8 +1,0 @@
-/*-------  首页图表样式开始 ------*/
-.main_chart .chart_bar,
-.main_chart .chart_pie {
-  width: 45%;
-  height: 400px;
-  border: 1px solid #000;
-}
-/*------- 首页图表样式结束 ------*/
