@@ -155,8 +155,8 @@ html, body {
   border: 1px solid #000;
 }
 
- table tr td,
- table tr th{
+.table.table-bordered tr td,
+.table.table-bordered tr th{
   text-align: center;
   vertical-align: middle;
 }
