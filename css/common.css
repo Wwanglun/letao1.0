@@ -160,3 +160,6 @@ html, body {
   text-align: center;
   vertical-align: middle;
 }
+.imgshow img {
+  margin-right: 10px;
+}
